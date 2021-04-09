@@ -1,0 +1,40 @@
+<body ><br>
+  <h1 class="center">Products</h1>
+
+<div *ngFor="let product of products">
+  <h4><br>
+    <a [title]="product.name + ' details'"><br>
+    {{ product.name }}
+    </a>
+  </h4>
+
+  <h6 *ngIf="product.description">
+    Description: {{ product.description}}
+  </h6>
+
+  <p *ngIf="product.price">
+    Price: ${{ product.price}}
+  </p>
+
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-outline-danger" (click)="buy()">
+      Buy
+  </button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-outline-primary" (click)="share()">
+      Share
+      </button>
+    </div>
+
+  </div>
+  </div> 
+</body>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
